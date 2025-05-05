@@ -62,16 +62,29 @@ Anderson et al., *"Where to put the Image in an Image Caption Generator"* (2017)
 
 ### Qualitative Results
 
-**Base Model Example**:
-> "a man riding a surfboard on a wave"
 
-**Soft Attention Example**:
-> "a man in a wetsuit surfing on a large wave"
+To illustrate the performance of our models, we present sample outputs from each experiment:
 
-**Hard Attention Example**:
-> "a surfer is riding a big wave on the ocean"
+### Base Model (No Attention)
 
-These results demonstrate the improved relevance and context-awareness achieved using attention mechanisms.
+![Base Model Captions](Figures/base_captions.png)
+
+The base model generates captions by relying solely on the encoded image features without any attention mechanism. While it captures the general context, it may miss finer details due to the lack of focused attention.
+
+### Soft Attention Model
+
+![Soft Attention Captions](Figures/soft_attention_captions.png)
+
+Incorporating soft attention allows the model to weigh different parts of the image when generating each word in the caption. This results in more contextually relevant and detailed descriptions, as the model can focus on salient regions of the image.
+
+### Hard Attention Model
+
+![Hard Attention Captions](Figures/hard_attention_captions.png)
+
+The hard attention mechanism enables the model to select specific regions of the image to focus on at each time step. This stochastic approach can lead to more precise captions but may introduce variability due to its sampling nature.
+
+These qualitative examples demonstrate the improvements in caption generation when employing attention mechanisms, with soft attention providing smoother and more consistent enhancements over the base model.
+
 
 ## Required Libraries
 
